@@ -46,7 +46,7 @@ class Player(object):
         Returns:
             str: ANSI string of the original image given.
         """
-        return convert_image(image, width=self.terminal_columns, is_unicode=True)
+        return convert_image(image, width=self.terminal_columns, is_unicode=True, is_truecolor=True, is_256color=False)
 
     def extract_audio(self, output_path: str = "audio.mp3"):
         """Extract audio from given video.
@@ -228,5 +228,5 @@ class Player(object):
 
 
 if __name__ == "__main__":
-    player = Player("./test.mp4")
+    player = Player("./华强买瓜.mp4")
     player.play()
